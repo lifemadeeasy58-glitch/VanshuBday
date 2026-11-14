@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <title>Happy Birthday, Vanshu! 💗</title>
+  <meta name="description" content="A little world made with endless love, just for Vanshu. Happy Birthday, birthday girl!"/>
+  <meta name="theme-color" content="#E75480"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-heart">💗</div>
+    <p class="loader-text">Loading your surprise...</p>
+  </div>
+
+  <div class="cursor-heart" id="cursorHeart" aria-hidden="true">💗</div>
+
+  <button class="music-toggle" id="musicToggle" aria-label="Toggle music">
+    <span class="music-icon" id="musicIcon">🎵</span>
+    <span class="music-label" id="musicLabel">Music</span>
+  </button>
+
+  <!-- ═══════════════════════════════════
+       §1  OPENING SCREEN
+  ═══════════════════════════════════ -->
+  <section id="opening" class="page opening-screen" aria-label="Birthday surprise opening">
+    <div class="particles-layer" id="particlesLayer" aria-hidden="true"></div>
+    <div class="butterflies-layer" id="butterfliesLayer" aria-hidden="true"></div>
+
+    <div class="opening-inner">
+      <div class="opening-top">
+        <span class="opening-tag">🎀 Birthday Surprise 🎀</span>
+        <h1 class="opening-greeting">Heyyyy Vanshuuu! 💗</h1>
+        <p class="opening-sub">Someone very special was born today...</p>
+        <p class="opening-guess">Can you guess who? <span class="inline-emoji">🌸</span></p>
+      </div>
+
+      <div class="gift-zone">
+        <div class="gift-glow" aria-hidden="true"></div>
+        <div class="gift-box" id="giftBox" role="button" tabindex="0" aria-label="Open your surprise gift">
+          <div class="gift-lid" id="giftLid">
+            <div class="lid-stripe"></div>
+            <div class="lid-bow">
+              <div class="bow-loop bow-loop-l"></div>
+              <div class="bow-loop bow-loop-r"></div>
+              <div class="bow-knot"></div>
+            </div>
+          </div>
+          <div class="gift-body">
+            <div class="body-stripe-h"></div>
+            <div class="body-stripe-v"></div>
+          </div>
+        </div>
+        <div class="gift-sparks" id="giftSparks" aria-hidden="true"></div>
+      </div>
+
+      <div class="opening-cta">
+        <p class="opening-hint">There is a little surprise waiting for you, birthday girl! 🎀</p>
+        <button class="btn-open" id="openBtn">
+          <span class="btn-text">Open Your Surprise</span>
+          <span class="btn-icon" aria-hidden="true">💝</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       §2  HERO — HAPPY BIRTHDAY
+  ═══════════════════════════════════ -->
+  <section id="hero" class="page hero-page" aria-label="Happy Birthday section" hidden>
+    <div class="balloons-layer" id="balloonsLayer" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-text-block">
+        <span class="hero-pill">🎂 It's Your Day! 🎂</span>
+        <h2 class="hero-title">
+          <span class="hero-title-top">Happiest Birthday,</span>
+          <span class="hero-title-bot">Vanshuuu! 💗</span>
+        </h2>
+        <p class="hero-sub">Today, the world celebrates the day its sweetest soul came into existence.</p>
+        <p class="hero-body">To my favourite person, my sweetest happiness, and my most beautiful reason to smile — <em>this little world is all yours.</em></p>
+      </div>
+
+      <div class="cake-block">
+        <div class="cake-wrap" id="cakeWrap">
+          <div class="candles-row">
+            <div class="candle"><div class="flame"><div class="flame-core"></div></div></div>
+            <div class="candle"><div class="flame"><div class="flame-core"></div></div></div>
+            <div class="candle"><div class="flame"><div class="flame-core"></div></div></div>
+            <div class="candle"><div class="flame"><div class="flame-core"></div></div></div>
+            <div class="candle"><div class="flame"><div class="flame-core"></div></div></div>
+          </div>
+          <div class="tier tier-1">
+            <div class="frosting-drip"></div>
+            <span class="tier-text">Happy Birthday ❤️</span>
+          </div>
+          <div class="tier tier-2">
+            <div class="frosting-drip"></div>
+            <span class="tier-deco">💗 ✨ 💗 ✨ 💗</span>
+          </div>
+          <div class="tier tier-3">
+            <div class="frosting-drip"></div>
+            <span class="tier-deco">🌸 🌷 🌸 🌷 🌸</span>
+          </div>
+          <div class="cake-stand"></div>
+        </div>
+        <button class="btn-wish" id="makeWishBtn">Make a Wish ✨</button>
+        <div class="wish-reveal hidden" id="wishReveal">
+          <p>✨ I hope every little wish your heart holds finds its way to you. You deserve all the happiness in this universe. 💫</p>
+        </div>
+      </div>
+    </div>
+    <a href="#letter" class="scroll-cue" aria-label="Continue to love letter">
+      <span class="scroll-cue-heart">💗</span>
+      <span class="scroll-cue-label">Keep scrolling</span>
+      <span class="scroll-cue-arrow">↓</span>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       §3  LOVE LETTER
+  ═══════════════════════════════════ -->
+  <section id="letter" class="page letter-page" aria-label="Love letter section">
+    <div class="sec-container">
+      <header class="sec-header">
+        <span class="sec-emoji" aria-hidden="true">💌</span>
+        <h2 class="sec-title">A Little Letter For My Vanshu</h2>
+        <div class="sec-rule" aria-hidden="true"></div>
+      </header>
+
+      <div class="envelope-stage" id="envelopeStage">
+        <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open love letter">
+          <div class="env-flap" id="envFlap" aria-hidden="true"></div>
+          <div class="env-body">
+            <div class="env-seal" aria-hidden="true">💗</div>
+            <span class="env-cta">Tap to open 💌</span>
+          </div>
+          <div class="env-base" aria-hidden="true"></div>
+        </div>
+
+        <article class="letter-sheet hidden" id="letterSheet" aria-label="Birthday love letter">
+          <div class="letter-deco letter-deco-top" aria-hidden="true">🌸 🌷 🌸 🌷 🌸</div>
+          <p class="letter-dateline">On Your Special Day 💗</p>
+          <p class="letter-salute">Dear Vanshu,</p>
+          <p>Happiest birthday, my love! ❤️</p>
+          <p>I wish I could be right there beside you today, holding your hands, looking into your eyes, making you smile, and celebrating your special day with you.</p>
+          <p>But even though distance keeps us apart today, please remember that my heart is always with you.</p>
+          <p>I wish you could see yourself through my eyes, just once. You would understand how incredibly special you are to me.</p>
+          <p>Your smile makes my days brighter. Your happiness means more to me than words can explain. And even on the days when miles separate us, you still manage to make my world feel complete.</p>
+          <p>I hope this new year of your life brings you endless smiles, beautiful opportunities, good health, success, peace, and every little thing you have ever wished for.</p>
+          <p>Never stop smiling, never stop being the beautiful person you are, and never forget how much you mean to me.</p>
+          <p>If I could make one birthday wish for myself, it would be to celebrate many, many more birthdays with you — with no screens, no distance, and no goodbyes.</p>
+          <p>Until that day comes, imagine the biggest hug and the sweetest kiss coming your way.</p>
+          <p>Happy Birthday once again, my Vanshu! 💗</p>
+          <p class="letter-valediction">With all my love,</p>
+          <p class="letter-signature">Your favourite person. ❤️</p>
+          <div class="letter-deco letter-deco-bot" aria-hidden="true">🌺 🌸 🌺 🌸 🌺</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       §4  LONG DISTANCE
+  ═══════════════════════════════════ -->
+  <section id="distance" class="page distance-page" aria-label="Long distance love section">
+    <div class="sec-container">
+      <header class="sec-header">
+        <span class="sec-emoji" aria-hidden="true">❤️</span>
+        <h2 class="sec-title">Miles Apart, Hearts Together.</h2>
+        <p class="sec-subtitle">Different places, maybe different skies, but one heart that always finds its way to you.</p>
+        <div class="sec-rule" aria-hidden="true"></div>
+      </header>
+
+      <div class="distance-map" aria-hidden="true">
+        <div class="map-loc map-loc-left">
+          <div class="map-bubble">🏠</div>
+          <span class="map-label">Me</span>
+        </div>
+        <div class="map-path">
+          <svg class="path-svg" viewBox="0 0 400 70" preserveAspectRatio="none" aria-hidden="true">
+            <path id="curvePath" d="M 15 35 C 100 5, 300 65, 385 35"
+              stroke="url(#pathGrad)" stroke-width="2.5"
+              stroke-dasharray="8 6" fill="none" stroke-linecap="round"/>
+            <defs>
+              <linearGradient id="pathGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#E75480"/>
+                <stop offset="100%" stop-color="#FFB6D5"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span class="path-heart" id="pathHeart" aria-hidden="true">💗</span>
+        </div>
+        <div class="map-loc map-loc-right">
+          <div class="map-bubble">💗</div>
+          <span class="map-label">Vanshu</span>
+        </div>
+      </div>
+
+      <div class="dist-cards">
+        <div class="dist-card card-reveal">
+          <div class="dist-card-icon">🌙</div>
+          <h3>Not Beside You Today</h3>
+          <p>I wish I could celebrate this day right by your side.</p>
+        </div>
+        <div class="dist-card dist-card-featured card-reveal">
+          <div class="dist-card-icon">💞</div>
+          <h3>But Always With You</h3>
+          <p>No distance can change the place you hold in my heart.</p>
+        </div>
+        <div class="dist-card card-reveal">
+          <div class="dist-card-icon">🌅</div>
+          <h3>Until We Meet Again</h3>
+          <p>One day, there will be no screens between our smiles.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       §5  10 REASONS
+  ═══════════════════════════════════ -->
+  <section id="reasons" class="page reasons-page" aria-label="10 reasons you are special">
+    <div class="sec-container">
+      <header class="sec-header">
+        <span class="sec-emoji" aria-hidden="true">🌷</span>
+        <h2 class="sec-title">10 Reasons Why You're So Special To Me</h2>
+        <div class="sec-rule" aria-hidden="true"></div>
+      </header>
+      <div class="reasons-grid">
+        <div class="reason-card card-reveal" data-n="01"><span class="r-num" aria-hidden="true">01</span><span class="r-heart" aria-hidden="true">💗</span><p>Your beautiful smile.</p></div>
+        <div class="reason-card card-reveal" data-n="02"><span class="r-num" aria-hidden="true">02</span><span class="r-heart" aria-hidden="true">💗</span><p>The way you make ordinary moments special.</p></div>
+        <div class="reason-card card-reveal" data-n="03"><span class="r-num" aria-hidden="true">03</span><span class="r-heart" aria-hidden="true">💗</span><p>Your adorable little personality.</p></div>
+        <div class="reason-card card-reveal" data-n="04"><span class="r-num" aria-hidden="true">04</span><span class="r-heart" aria-hidden="true">💗</span><p>The happiness you bring into my life.</p></div>
+        <div class="reason-card card-reveal" data-n="05"><span class="r-num" aria-hidden="true">05</span><span class="r-heart" aria-hidden="true">💗</span><p>The way you make me miss you even more.</p></div>
+        <div class="reason-card card-reveal" data-n="06"><span class="r-num" aria-hidden="true">06</span><span class="r-heart" aria-hidden="true">💗</span><p>Your beautiful heart.</p></div>
+        <div class="reason-card card-reveal" data-n="07"><span class="r-num" aria-hidden="true">07</span><span class="r-heart" aria-hidden="true">💗</span><p>The comfort I feel when talking to you.</p></div>
+        <div class="reason-card card-reveal" data-n="08"><span class="r-num" aria-hidden="true">08</span><span class="r-heart" aria-hidden="true">💗</span><p>Your ability to make me smile without even trying.</p></div>
+        <div class="reason-card card-reveal" data-n="09"><span class="r-num" aria-hidden="true">09</span><span class="r-heart" aria-hidden="true">💗</span><p>The memories we create together.</p></div>
+        <div class="reason-card reason-special card-reveal" data-n="10"><span class="r-num" aria-hidden="true">10</span><span class="r-heart" aria-hidden="true">❤️</span><p>Simply because you're <strong>YOU</strong>, Vanshu. ❤️</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       §6  WISH MACHINE
+  ═══════════════════════════════════ -->
+  <section id="wishes" class="page wishes-page" aria-label="Birthday wish machine">
+    <div class="sec-container">
+      <header class="sec-header">
+        <span class="sec-emoji" aria-hidden="true">🎁</span>
+        <h2 class="sec-title">Let's See What The Universe Has Planned For You ✨</h2>
+        <div class="sec-rule" aria-hidden="true"></div>
+      </header>
+      <div class="wish-machine">
+        <div class="orb-wrap" aria-hidden="true">
+          <div class="orb" id="orb">
+            <div class="orb-ring r1"></div>
+            <div class="orb-ring r2"></div>
+            <div class="orb-ring r3"></div>
+            <div class="orb-core"><span>✨</span></div>
+          </div>
+        </div>
+        <button class="btn-wish-reveal" id="wishBtn">
+          <span class="btn-text">Reveal Your Wish</span>
+          <span class="btn-icon" aria-hidden="true">💗</span>
+        </button>
+        <div class="wish-output hidden" id="wishOutput" aria-live="polite">
+          <div class="wish-card">
+            <div class="wish-stars" aria-hidden="true">✨ ⭐ ✨ ⭐ ✨</div>
+            <p class="wish-quote" id="wishQuote"></p>
+            <div class="wish-flowers" aria-hidden="true">🌸 💗 🌷 💗 🌸</div>
+          </div>
+        </div>
+        <p class="wish-nudge" id="wishNudge">Tap the button to reveal your special wish!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       §7  PROMISES
+  ═══════════════════════════════════ -->
+  <section id="promises" class="page promises-page" aria-label="Our little promises">
+    <div class="sec-container">
+      <header class="sec-header">
+        <span class="sec-emoji" aria-hidden="true">💞</span>
+        <h2 class="sec-title">Our Little Promises</h2>
+        <div class="sec-rule" aria-hidden="true"></div>
+      </header>
+      <div class="promises-grid">
+        <div class="promise-card card-reveal">
+          <span class="p-num" aria-hidden="true">01</span>
+          <span class="p-icon" aria-hidden="true">😊</span>
+          <p class="p-text">"To make you smile even on your toughest days."</p>
+        </div>
+        <div class="promise-card card-reveal">
+          <span class="p-num" aria-hidden="true">02</span>
+          <span class="p-icon" aria-hidden="true">🎉</span>
+          <p class="p-text">"To celebrate your little victories as much as your big ones."</p>
+        </div>
+        <div class="promise-card card-reveal">
+          <span class="p-num" aria-hidden="true">03</span>
+          <span class="p-icon" aria-hidden="true">💗</span>
+          <p class="p-text">"To keep choosing you, even when miles separate us."</p>
+        </div>
+        <div class="promise-card card-reveal">
+          <span class="p-num" aria-hidden="true">04</span>
+          <span class="p-icon" aria-hidden="true">🌅</span>
+          <p class="p-text">"To look forward to the day when birthdays mean being together — not wishing through a screen."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       §8  FINALE
+  ═══════════════════════════════════ -->
+  <section id="finale" class="page finale-page" aria-label="Final birthday message">
+    <div class="finale-stars" id="finaleStars" aria-hidden="true"></div>
+    <div class="finale-floaters" id="finaleFloaters" aria-hidden="true"></div>
+    <div class="finale-inner">
+      <div class="finale-pulse-heart" aria-hidden="true">💖</div>
+      <h2 class="finale-heading">Before You Go, My Birthday Girl...</h2>
+      <p class="finale-body">I know I can't magically appear beside you today, but if love could travel, you'd be receiving the warmest hug in the universe right now.</p>
+      <div class="typing-wrap">
+        <div class="typing-box">
+          <div class="typing-out" id="typingOut" aria-live="polite"></div><span class="typing-cur" id="typingCur" aria-hidden="true">|</span>
+        </div>
+      </div>
+      <button class="btn-hug hidden" id="hugBtn">One Last Hug? 🫂</button>
+      <div class="hug-wrap hidden" id="hugWrap">
+        <div class="hug-scene" aria-label="Illustration of two figures hugging with a heart">
+          <div class="fig fig-him">
+            <div class="fig-head"></div>
+            <div class="fig-body fig-body-him"></div>
+            <div class="fig-arm arm-him"></div>
+          </div>
+          <span class="hug-heart" aria-hidden="true">💗</span>
+          <div class="fig fig-her">
+            <div class="fig-head">
+              <div class="fig-hair"></div>
+            </div>
+            <div class="fig-body fig-body-her"></div>
+            <div class="fig-arm arm-her"></div>
+          </div>
+        </div>
+        <p class="hug-caption">Consider yourself hugged a million times! ❤️</p>
+      </div>
+      <footer class="finale-footer">
+        <p class="footer-love">Made with endless love, especially for Vanshu. 💌</p>
+        <p class="footer-flowers" aria-hidden="true">🌸 💗 🌺 💗 🌸</p>
+      </footer>
+    </div>
+    <div class="burst-layer hidden" id="burstLayer" aria-hidden="true"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
